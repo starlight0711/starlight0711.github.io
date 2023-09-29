@@ -1,0 +1,55 @@
+body {
+    color: #000;
+    overflow-x: hidden;
+    height: 100%;
+    //background-color: #B0BEC5;
+    //background-color: #cad7de;
+    background-repeat: no-repeat;
+}
+
+
+
+
+.icon{
+    width:140px;
+    border-radius: 50%;
+}
+
+.wrapper {
+    margin-right: auto; /* 1 */
+    margin-left:  auto; /* 1 */
+  
+    max-width: 960px; /* 2 */
+  
+    padding-right: 10px; /* 3 */
+    padding-left:  10px; /* 3 */
+  }
+
+  .twitter {
+    background-color: #1DA1F2;
+    color: #fff;
+    border: 0px solid #FFF;
+    border-radius: 50%;
+    height: 52.5px;
+    width: 52.5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer
+}
+
+
+.title {
+    /* font-family: 'Secular One', sans-serif; */
+    font-family: 'Fjalla One', sans-serif;
+}
+
+.subtitle{
+    /* font-family: 'Fjalla One', sans-serif; */
+    font-family: 'Noto Sans JP', sans-serif;
+}
+
+.icon{
+    border-radius: 50%;
+    width: 200px;
+}
