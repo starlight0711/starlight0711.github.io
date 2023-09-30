@@ -56,7 +56,9 @@
                     var html = "";
 
 for (var i = 0; images.length > i; i++) {
-  html += '<div class="col-sm-6 col-md-4"><a class="lightbox" href="'+images[i]+'"><img src="'+ images[i] +'" id="img' + i + '"/></a></div>';
+  var num=6;
+  if(i%3==0) num=12;
+  html += '<div class="col-sm-'+num+' col-md-4"><a class="lightbox" href="'+images[i]+'"><img src="'+ images[i] +'" id="img' + i + '"/></a></div>';
 }
 
 document.getElementById('test').innerHTML = html;
