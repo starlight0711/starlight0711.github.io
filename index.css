@@ -46,7 +46,8 @@ body {
 
 .subtitle{
     /* font-family: 'Fjalla One', sans-serif; */
-    font-family: 'Noto Sans JP', sans-serif;
+    font-family: 'Noto Sans JP', sans-serif!important;
+    border: 0px!important;
 }
 
 .icon{

@@ -41,15 +41,21 @@ body {
 
 .title {
     /* font-family: 'Secular One', sans-serif; */
-    font-family: 'Fjalla One', sans-serif;
+    font-family: 'Fjalla One', sans-serif!important;
 }
 
 .subtitle{
     /* font-family: 'Fjalla One', sans-serif; */
-    font-family: 'Noto Sans JP', sans-serif;
+    font-family: 'Noto Sans JP', sans-serif!important;
 }
 
 .icon{
     border-radius: 50%;
     width: 200px;
+}
+
+select{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
 }
