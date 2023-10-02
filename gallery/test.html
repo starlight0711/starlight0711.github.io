@@ -89,7 +89,7 @@ var filenames=[], foldernames=[];
 
     $(document).ready(function () 
     {
-        $.get(".", function(data) 
+        $.get("/"+folders[selectedAlbum], function(data) 
         {
             console.log(data);
         });
