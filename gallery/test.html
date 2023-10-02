@@ -67,7 +67,7 @@
                     '231010 Dawn to Dusk Tour in Vancouver',
                     ];
 
-                    
+
                     
                     const images = [
                     '1.jpg',
@@ -82,6 +82,24 @@
                     '10.jpg',
                     '11.jpg',
                     ];
+
+
+var fileExt = ".jpg";
+
+        $(document).ready(function(){
+
+            $.ajax({
+                url: '../',
+                success: function (data) {
+                    console.log(data);
+                   //List all jpg file names
+                    $(data).find("a:contains(" + fileExt + ")").each(function () {
+                        concole.log($(this).text());
+                    });
+                }
+            });
+
+        });
 
 
 		
