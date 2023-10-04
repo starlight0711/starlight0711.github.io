@@ -21,7 +21,16 @@ const folders = [
   '231010 Dawn to Dusk Tour in Vancouver',
   ];
 
+  const queryString = window.location.search;
+  const urlParams = new URLSearchParams(queryString);
+  const album = urlParams.get('album')
+
   var selectedAlbum = 3;
+  if(album!=null){
+    selectedAlbum= album;
+  }
+
+
   var galleryHtml = "";
   var images = [];
 //  const comingSoonHtml = "Coming Soon....";
