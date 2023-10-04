@@ -4,9 +4,13 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Starlight Gallery</title>
+	  <link rel="icon" href="https://pbs.twimg.com/profile_images/1656776963472732166/VyVX4xWA_400x400.jpg">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+    <link href="https://getbootstrap.com/docs/5.2/assets/css/docs.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+
 
     <!-- Gallery -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.8.1/baguetteBox.min.css">
@@ -33,88 +37,12 @@
     
     <div class="container text-center p-3 gallery-container">
       <h1 class="display-4 fw-bold title p-3">STARLIGHT_TheRose</h1>
-      <p class="lead subtitle">230923 Life is Beautiful in Las Vegas</p>
-      <div class="tz-gallery">
 
-        <div id="test" class="row gallery">
+      <select id="selectAlbum" class="lead mb-4 subtitle border-0 text-center list-unstyled">
+      </select>
 
-                  <script>
-
-                    const folders = [
-                    '230119HealFanSign',
-                    '230916MusicMidtown',
-                    '230918SecretEvent',
-                    '230923LifeIsBeautiful',
-                    '231004DawntoDuskTourSanFrancisco',
-                    '231006DawntoDuskTourPortland',
-                    '231008DawntoDuskTourSeattle',
-                    '231010DawntoDuskTourVancouver',
-                    ];
-                    
-                    const titles = [
-                    '230119 Heal Fan Sign in Seoul',
-                    '230916 Music Midtown in Atlanta',
-                    '230918 Secret Event in Los Angeles',
-                    '230923 Life Is Beautiful in Las Vegas',
-                    '231004 Dawn to Dusk Tour in San Francisco',
-                    '231006 Dawn to Dusk Tour in Portland',
-                    '231008 Dawn to Dusk Tour in Seattle',
-                    '231010 Dawn to Dusk Tour in Vancouver',
-                    ];
-
-                    
-                    
-                    const images = [
-                    '230923LifeIsBeautiful/1.jpg',
-                    '230923LifeIsBeautiful/2.jpg',
-                    '230923LifeIsBeautiful/3.jpg',
-                    '230923LifeIsBeautiful/4.jpg',
-                    '230923LifeIsBeautiful/5.jpg',
-                    '230923LifeIsBeautiful/6.jpg',
-                    '230923LifeIsBeautiful/7.jpg',
-                    '230923LifeIsBeautiful/8.jpg',
-                    '230923LifeIsBeautiful/9.jpg',
-                    '230923LifeIsBeautiful/10.jpg',
-                    '230923LifeIsBeautiful/11.jpg',
-                    ];
-                    
-                    var html = "";
-
-for (var i = 0; images.length > i; i++) {
-  var num=6;
-  if(i%3==0) num=12;
-  html += '<div class="col-sm-'+num+' col-md-4"><a class="lightbox" href="'+images[i]+'"><img src="'+ images[i] +'" id="img' + i + '"/></a></div>';
-}
-
-document.getElementById('test').innerHTML = html;
-                </script>
-
-            <!-- <div class="col-sm-6 col-md-4">
-              <a class="lightbox" href="230923LifeIsBeautiful/2.jpg">
-                <img src="230923LifeIsBeautiful/2.jpg" alt="2">
-            </a>
-            </div>
-            <div class="col-sm-12 col-md-4">
-              <a class="lightbox" href="230923LifeIsBeautiful/3.jpg">
-                <img src="230923LifeIsBeautiful/3.jpg" alt="3">
-            </a>
-            </div>
-            <div class="col-sm-6 col-md-4">
-              <a class="lightbox" href="230923LifeIsBeautiful/4.jpg">
-                  <img src="230923LifeIsBeautiful/4.jpg" alt="4">
-              </a>
-            </div>
-            <div class="col-sm-6 col-md-4">
-              <a class="lightbox" href="230923LifeIsBeautiful/5.jpg">
-                <img src="230923LifeIsBeautiful/5.jpg" alt="5">
-            </a>
-            </div>
-            <div class="col-sm-12 col-md-4">
-              <a class="lightbox" href="230923LifeIsBeautiful/6.jpg">
-                <img src="230923LifeIsBeautiful/6.jpg" alt="6">
-            </a>
-            </div> -->
-        </div>
+      <div class="tz-gallery"> 
+        <div id="galleryDiv" class="row gallery"></div>
       </div>
 
 
@@ -125,7 +53,7 @@ document.getElementById('test').innerHTML = html;
      data-ad-slot="4294526088"></ins>
     </div>
 
-    <footer class="d-flex flex-wrap justify-content-between align-items-center border-top">
+    <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
       <div class="col-md-4 d-flex align-items-center">
         <a href="/" class="mb-3 me-2 mb-md-0 text-muted text-decoration-none lh-1">
           <svg class="bi" width="30" height="24"><use xlink:href="#bootstrap"></use></svg>
@@ -140,7 +68,7 @@ document.getElementById('test').innerHTML = html;
       <p class="col-12 text-center text-muted">Website designed and built by Yasmine Luk</p>
     </footer>
   <div >
-
+    <script src="gallery.js"></script>
 
 
   <!-- Google AdSense -->
@@ -158,8 +86,6 @@ document.getElementById('test').innerHTML = html;
     gtag('config', 'G-L1HWVMKSHP');
   </script>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
-  
   <script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.8.1/baguetteBox.min.js"></script>
   <script>
       baguetteBox.run('.tz-gallery');
