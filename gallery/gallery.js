@@ -24,9 +24,9 @@ const folders = [
   const queryString = window.location.search;
 
 
-  //const urlParams = new URLSearchParams(queryString);
-  //const album = urlParams.get('album');
-const album =2;
+  const urlParams = new URLSearchParams(queryString);
+  const album = urlParams.get('album');
+//const album =2;
   var selectedAlbum = 3;
   if(album!=null){
     selectedAlbum= album;
