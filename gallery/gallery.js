@@ -37,7 +37,7 @@ const folders = [
   const album = urlParams.get('album');
   console.log(album);
   var selectedAlbum = 11;
-  if(album!=null){
+  if(album>0 && album<12){
     selectedAlbum= album;
   }
 
