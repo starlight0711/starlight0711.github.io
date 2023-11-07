@@ -8,6 +8,10 @@ const folders = [
   '231006DawntoDuskTourPortland',
   '231008DawntoDuskTourSeattle',
   '231010DawntoDuskTourVancouver',
+  '231020DawntoDuskTourToronto',
+  '231022DawntoDuskTourNewYork',
+  '231024DawntoDuskTourFairfax',
+  '231026DawntoDuskTourColumbus'
   ];
   
   const titles = [
@@ -19,6 +23,10 @@ const folders = [
   '231006 Dawn to Dusk Tour in Portland',
   '231008 Dawn to Dusk Tour in Seattle',
   '231010 Dawn to Dusk Tour in Vancouver',
+  '231020 Dawn to Dusk Tour in Toronto',
+  '231022 Dawn to Dusk Tour in NewYork',
+  '231024 Dawn to Dusk Tour in Fairfax',
+  '231026 Dawn to Dusk Tour in Columbus'
   ];
 
   const queryString = window.location.search;
@@ -27,7 +35,7 @@ const folders = [
   const urlParams = new URLSearchParams(queryString);
   const album = urlParams.get('album');
 //const album =2;
-  var selectedAlbum = 3;
+  var selectedAlbum = 11;
   if(album!=null){
     selectedAlbum= album;
   }
