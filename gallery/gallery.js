@@ -33,8 +33,9 @@ const folders = [
 
 
   const urlParams = new URLSearchParams(queryString);
+
   const album = urlParams.get('album');
-//const album =2;
+  console.log(album);
   var selectedAlbum = 11;
   if(album!=null){
     selectedAlbum= album;
@@ -43,8 +44,8 @@ const folders = [
 
   var galleryHtml = "";
   var images = [];
-//  const comingSoonHtml = "Coming Soon....";
-const comingSoonHtml = '<div class="col-sm-6 center"><img src="https://media.giphy.com/media/JJLc5PUVwnOT15Mq13/giphy.gif"></div>'; 
+  //  const comingSoonHtml = "Coming Soon....";
+  const comingSoonHtml = '<div class="col-sm-6 center"><img src="https://media.giphy.com/media/JJLc5PUVwnOT15Mq13/giphy.gif"></div>'; 
   $(document).ready(function () {
     getImages();
   })
@@ -85,7 +86,7 @@ function getImages(){
     document.getElementById('galleryDiv').innerHTML = "";
     if(images.length <= 1){
       console.log("test");
-    
+      changeAlbum()
       //document.getElementById('galleryDiv').innerHTML = "";
       
       $("#galleryDiv").html(comingSoonHtml);
