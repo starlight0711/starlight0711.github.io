@@ -68,11 +68,13 @@ function changeAlbum(){
   $("#selectAlbum").html(albumOptionsHtml);
 
   //Display images
+  galleryHtml += '<div class="row"><div class="col-sm-12 col-md-4"><a class="lightbox" href="231026DawntoDuskTourColumbus/IMG_9237.jpeg"><img src="231026DawntoDuskTourColumbus/IMG_9237.jpeg" alt="test"></a></div>';
   for (var i = 0; images.length > i; i++) {
     var num=6;var image = folders[selectedAlbum] + '/' + images[i];
     if(i%3==0) num=12;
-    galleryHtml += '<div class="col-sm-'+num+' col-md-4"><a class="lightbox" href="'+ image +'"><img src="'+ image +'" id="img' + i + '"/></a></div>';
+    galleryHtml += '<div class="col-sm-'+num+' col-md-4"><a class="lightbox" href="'+ image +'"><img src="'+ image +'" alt="img' + i + '"/></a></div>';
   }
+  galleryHtml += '</div>';
   $("#galleryDiv").html(galleryHtml);
  // document.getElementById('galleryDiv').innerHTML = galleryHtml;
 }
